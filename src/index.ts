@@ -46,7 +46,12 @@ if (fs.existsSync(folderPath)) {
       }
     }
   });
-  console.log("INCORRECT FILES: ", result);
+
+  if (result.length) {
+    console.log("INCORRECT IMAGES: ", result);
+  } else {
+    console.log("CONGRATULATIONS!");
+  }
 } else {
   console.log("ERROR: PATH IS NOT EXISTS.");
 }

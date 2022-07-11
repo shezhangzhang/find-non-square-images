@@ -1,6 +1,6 @@
 {
   "name": "find-non-square-images",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Find non-square images in folder.",
   "main": "./lib/index.js",
   "files": [
