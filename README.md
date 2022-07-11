@@ -1,7 +1,15 @@
-# find-non-square-images
+# oneoneeyes
 
-Find non-square images in folder.
+Find non-square & size is not 2 to the nth power images in a specific folder.
 
-`npm i oneoneeyes -g`
+## Installation
 
-`oneoneeyes path/to/folder`
+```sh
+npm i oneoneeyes -g
+```
+
+## Quick Start
+
+```sh
+oneoneeyes path/to/folder
+```
