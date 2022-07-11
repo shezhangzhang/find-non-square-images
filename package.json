@@ -1,0 +1,11 @@
+{
+  "name": "find-non-square-images",
+  "version": "1.0.0",
+  "description": "Find non-square images in folder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shezhangzhang",
+  "license": "MIT"
+}
