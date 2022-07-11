@@ -1,18 +1,18 @@
 {
-  "name": "find-non-square-images",
-  "version": "1.0.5",
-  "description": "Find non-square images in folder.",
+  "name": "oneoneeyes",
+  "version": "1.0.0",
+  "description": "Find non-square & size is not 2 to the nth power images in a specific folder.",
   "main": "./lib/index.js",
   "files": [
     "lib/"
   ],
   "bin": {
-    "find-images": "./lib/index.js"
+    "oneoneeyes": "./lib/index.js"
   },
   "scripts": {
     "tsc": "tsc -p tsconfig.json",
     "prepublish": "npm run tsc",
-    "local": "sudo npm i -g && find-images"
+    "local": "sudo npm i -g && oneoneeyes"
   },
   "author": "shezhangzhang",
   "license": "MIT",
@@ -26,6 +26,7 @@
   "dependencies": {
     "commander": "^9.3.0",
     "image-size": "^1.0.1",
+    "ora": "^5.4.1",
     "tga": "^1.0.7"
   }
 }
