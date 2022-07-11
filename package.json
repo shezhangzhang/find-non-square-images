@@ -1,11 +1,32 @@
 {
   "name": "find-non-square-images",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Find non-square images in folder.",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "bin": {
+    "find-images": "./lib/index.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/index.ts -p aaa/bbb",
+    "tsc": "tsc -p tsconfig.json",
+    "prepublish": "npm run tsc",
+    "local": "sudo npm i -g && find-images"
   },
   "author": "shezhangzhang",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/shezhangzhang/find-non-square-images.git",
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "commander": "^9.3.0",
+    "image-size": "^1.0.1",
+    "tga": "^1.0.7"
+  }
 }
