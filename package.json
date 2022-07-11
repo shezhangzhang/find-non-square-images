@@ -1,6 +1,6 @@
 {
   "name": "find-non-square-images",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Find non-square images in folder.",
   "main": "./lib/index.js",
   "files": [
@@ -10,7 +10,6 @@
     "find-images": "./lib/index.js"
   },
   "scripts": {
-    "start": "ts-node src/index.ts -p aaa/bbb",
     "tsc": "tsc -p tsconfig.json",
     "prepublish": "npm run tsc",
     "local": "sudo npm i -g && find-images"
