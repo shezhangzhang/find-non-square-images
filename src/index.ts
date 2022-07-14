@@ -4,7 +4,6 @@ import fs from "fs";
 import path from "path";
 import sizeOf from "image-size";
 import ora from "ora";
-const TGA = require("tga");
 
 const program = new Command();
 
@@ -31,7 +30,7 @@ if (fs.existsSync(folderPath)) {
       lowerCaseFileName.endsWith(".tga")
     ) {
       try {
-        const imageInfo = getImageInfo(lowerCaseFileName, filePath);
+        const imageInfo = sizeOf(filePath);
 
         if (imageInfo?.width !== imageInfo?.height) {
           result.push(`fileName: ${fileName}, reason: width != height.`);
@@ -56,19 +55,7 @@ if (fs.existsSync(folderPath)) {
   console.log("ERROR: PATH IS NOT EXISTS.");
 }
 
-function getImageInfo(fileName: string, filePath: string) {
-  let imageInfo: any;
-
-  if (fileName.endsWith("png")) {
-    imageInfo = sizeOf(filePath);
-  } else {
-    imageInfo = new TGA(fs.readFileSync(filePath));
-  }
-
-  return imageInfo;
-}
-
 // check num is '2 to the nth power'
-function check2(num: number) {
+export function check2(num: number) {
   return num > 0 && (num & (num - 1)) === 0;
 }
