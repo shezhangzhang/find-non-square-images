@@ -33,10 +33,16 @@ if (fs.existsSync(folderPath)) {
         const imageInfo = sizeOf(filePath);
 
         if (imageInfo?.width !== imageInfo?.height) {
-          result.push(`fileName: ${fileName}, reason: width != height.`);
+          result.push(
+            `FileName: ${fileName}, Size: ${imageInfo?.width || "-"}*${
+              imageInfo.height || "-"
+            }, Reason: width != height.`
+          );
         } else if (!check2(imageInfo?.width || 0)) {
           result.push(
-            `fileName: ${fileName}, reason: size is not 2 to the nth power.`
+            `FileName: ${fileName}, Size: ${imageInfo?.width || "-"}*${
+              imageInfo.height || "-"
+            }, Reason: size is not 2 to the nth power.`
           );
         }
       } catch (error) {
